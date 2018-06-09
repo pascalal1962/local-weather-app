@@ -1,0 +1,5 @@
+[Environment]::SetEnvironmentVariable("DOCKER_TLS_VERIFY", "1", "User")
+[Environment]::SetEnvironmentVariable("DOCKER_HOST", "tcp://192.168.99.100:2376", "User")
+[Environment]::SetEnvironmentVariable("DOCKER_CERT_PATH", "C:\Users\chat\.docker\machine\machines\default", "User")
+[Environment]::SetEnvironmentVariable("DOCKER_MACHINE_NAME", "default", "User")
+[Environment]::SetEnvironmentVariable("COMPOSE_CONVERT_WINDOWS_PATH", "true", "User")

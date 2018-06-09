@@ -17,4 +17,3 @@ export class WeatherServiceFake implements IWeatherService {
     return of(this.fakeWeather)
   }
 }
-
