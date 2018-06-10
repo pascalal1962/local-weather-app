@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-
 import { ICurrentWeather } from '../interfaces'
 import { WeatherService } from '../weather/weather.service'
 
@@ -17,5 +16,12 @@ export class CurrentWeatherComponent implements OnInit {
     this.weatherService
       .getCurrentWeather('Bethesda', 'US')
       .subscribe(data => (this.current = data))
+  }
+
+  public getOrdinal(date: number) {
+    const n = new Date(date).getDate()
+    return n > 0
+      ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10]
+      : ''
   }
 }

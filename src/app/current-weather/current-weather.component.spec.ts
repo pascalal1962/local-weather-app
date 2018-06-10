@@ -1,8 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
 import { CurrentWeatherComponent } from './current-weather.component'
 import { WeatherService } from '../weather/weather.service'
 import { WeatherServiceFake } from '../weather/weather.service.fake'
+import { MaterialModule } from '../material.module'
 
 describe('CurrentWeatherComponent', () => {
   let component: CurrentWeatherComponent
@@ -11,6 +13,7 @@ describe('CurrentWeatherComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CurrentWeatherComponent],
+      imports: [MaterialModule, NoopAnimationsModule],
       providers: [{ provide: WeatherService, useClass: WeatherServiceFake }],
     }).compileComponents()
   }))
