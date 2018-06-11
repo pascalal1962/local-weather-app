@@ -2,9 +2,9 @@
   "editor.tabSize": 2,
   "editor.rules": [90, 140],
   "files.trimTrailingWhitespace": true,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "off",
   "files.autoSaveDelay": 10000,
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": true,
   "editor.cursorBlinking": "solid",
   "workbench.iconTheme": "material-icon-theme",
   "git.enableSmartCommit": true,
@@ -18,7 +18,7 @@
   "editor.formatOnType": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.parameterHints": false,
+  "editor.parameterHints": true,
   "prettier.printWidth": 90,
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -28,7 +28,7 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "editor.quickSuggestions": {"other": false},
-  "editor.snippetSuggestions": "none",
+  "editor.quickSuggestions": {"other": true},
+  "editor.snippetSuggestions": "inline",
   "npm.enableScriptExplorer": true
 }
