@@ -26,14 +26,29 @@ import { WeatherService } from './weather/weather.service'
       </mat-card>
       <div fxFlex></div>
     </div>
+    <div fxLayout="row">
+      <div fxFlex></div>
+      <mat-card fxFlx="300px">
+        <mat-card-header>
+          <mat-card-title><div class="mat-headline">Your geolocation</div></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <app-geoloc></app-geoloc>
+        </mat-card-content>
+      </mat-card>
+      <div fxFlex></div>
+    </div>
   `,
-  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'app'
   currentWeather: ICurrentWeather
 
-  constructor(private weatherService: WeatherService) {}
+  constructor(private weatherService: WeatherService) {
+    this.weatherService
+      .getCurrentWeather('Rennes', 'FR')
+      .subscribe(data => (this.currentWeather = data))
+  }
 
   doSearch(searchValue) {
     const userInput = searchValue.split(',').map(s => s.trim())
